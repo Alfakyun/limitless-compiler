@@ -25,7 +25,7 @@ on:
         type: string
       kernel-url:
         description: 'Kernel-url'
-        default: 'https://github.com/FirmanBell/Eas.git'
+        default: 'https://github.com/Alfakyun/Eas.git'
         required: true
         type: string
       kernel-branch:
@@ -50,7 +50,7 @@ on:
         type: string
       AK3:
         description: 'AnyKernel3'
-        default: 'https://github.com/FirmanBell/AnyKernel3.git'
+        default: 'https://github.com/Alfakyun/AnyKernel3.git'
         required: true
         type: string
 jobs:
@@ -124,7 +124,7 @@ jobs:
             elif [ ${{ inputs.aosp-clang }} == "20" ]; then
                 aria2c -o aosp-clang.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r547379.tar.gz
             elif [ ${{ inputs.aosp-clang }} == "21" ]; then 
-                aria2c -o aosp-clang.tar.gz https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250205-release/Clang-21.0.0git-20250205.tar.gz
+                aria2c -o aosp-clang.tar.gz https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250213-release/Clang-21.0.0git-20250213.tar.gz
             elif [ ${{ inputs.aosp-clang }} != false ]; then
                 aria2c -o aosp-clang.tar.gz ${{ inputs.aosp-clang }}
             fi
@@ -169,7 +169,11 @@ jobs:
          fi
          rm -rf KernelSU
          if [ ${{ inputs.kernelsu }} == ksu ]; then
-            curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s v0.7.6
+            curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s v0.9.5
+         elif [ ${{ inputs.kernelsu }} == rksu ]; then
+            curl -LSs "https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh" | bash -s main
+         elif [ ${{ inputs.kernelsu }} == rksufs ]; then
+            curl -LSs "https://raw.githubusercontent.com/rsuntk/KernelSU/susfs-v1.5.5/kernel/setup.sh" | bash -s susfs-v1.5.5
          elif [ ${{ inputs.kernelsu }} == next ]; then
             curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next/kernel/setup.sh" | bash -s next
          elif [ ${{ inputs.kernelsu }} == nextfs ]; then
