@@ -10,7 +10,7 @@ on:
         type: string
       name:
         description: 'Name'
-        default: '4.4.302'
+        default: '4.4.302-platinum-ksu'
         required: true
         type: string
       compiler:
@@ -25,12 +25,12 @@ on:
         type: string
       kernel-url:
         description: 'Kernel-url'
-        default: 'https://github.com/Alfakyun/Eas.git'
+        default: 'https://github.com/hanifardhani/platinum_kernel_xiaomi_platina.git'
         required: true
         type: string
       kernel-branch:
         description: 'Kernel-branch'
-        default: 'main'
+        default: 'eas-bpf-new-udc-ksu'
         required: true
         type: string
       kernel-config:
@@ -40,7 +40,7 @@ on:
         type: string
       kernelsu:
         description: 'KernelSU | false for disable'
-        default: 'false'
+        default: 'rksu'
         required: true
         type: string
       disable-lto:
