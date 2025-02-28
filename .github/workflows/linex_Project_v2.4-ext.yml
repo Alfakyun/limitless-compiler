@@ -10,7 +10,7 @@ on:
         type: string
       name:
         description: 'Name'
-        default: '4.19.325-SouthWest-v3.15.1-ksu'
+        default: '4.4.302-platinum-ksu'
         required: true
         type: string
       compiler:
@@ -25,12 +25,12 @@ on:
         type: string
       kernel-url:
         description: 'Kernel-url'
-        default: 'https://github.com/Alfakyun/android_kernel_xiaomi_southwest-4.19.git'
+        default: 'https://github.com/hanifardhani/platinum_kernel_xiaomi_platina.git'
         required: true
         type: string
       kernel-branch:
         description: 'Kernel-branch'
-        default: 'main-ksu'
+        default: 'eas-bpf-new-udc-ksu'
         required: true
         type: string
       kernel-config:
@@ -124,7 +124,7 @@ jobs:
             elif [ ${{ inputs.aosp-clang }} == "20" ]; then
                 aria2c -o aosp-clang.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r547379.tar.gz
             elif [ ${{ inputs.aosp-clang }} == "21" ]; then 
-                aria2c -o aosp-clang.tar.gz https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250223-release/Clang-21.0.0git-20250223.tar.gz
+                aria2c -o aosp-clang.tar.gz https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250228-release/Clang-21.0.0git-20250228.tar.gz
             elif [ ${{ inputs.aosp-clang }} != false ]; then
                 aria2c -o aosp-clang.tar.gz ${{ inputs.aosp-clang }}
             fi
