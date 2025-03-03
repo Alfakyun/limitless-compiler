@@ -25,12 +25,12 @@ on:
         type: string
       kernel-url:
         description: 'Kernel-url'
-        default: 'https://github.com/Alfakyun/Loneliness.git'
+        default: 'https://github.com/Alfakyun/Lonelinext.git'
         required: true
         type: string
       kernel-branch:
         description: 'Kernel-branch'
-        default: 'main'
+        default: 'next-susfs'
         required: true
         type: string
       kernel-config:
@@ -40,7 +40,7 @@ on:
         type: string
       kernelsu:
         description: 'KernelSU | false for disable'
-        default: 'rksu'
+        default: 'nextfs'
         required: true
         type: string
       disable-lto:
