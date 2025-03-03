@@ -10,7 +10,7 @@ on:
         type: string
       name:
         description: 'Name'
-        default: '4.4.302'
+        default: '4.4.302-Loneliness-ksu'
         required: true
         type: string
       compiler:
