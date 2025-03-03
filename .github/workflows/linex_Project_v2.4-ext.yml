@@ -10,7 +10,7 @@ on:
         type: string
       name:
         description: 'Name'
-        default: '4.19.325-SouthWest-v3.15.1-ksu'
+        default: '4.19.325-SouthWest-v3.15.1'
         required: true
         type: string
       compiler:
@@ -25,12 +25,12 @@ on:
         type: string
       kernel-url:
         description: 'Kernel-url'
-        default: 'https://github.com/Alfakyun/android_kernel_xiaomi_southwest-4.19.git'
+        default: 'https://github.com/pix106/android_kernel_xiaomi_southwest-4.19.git'
         required: true
         type: string
       kernel-branch:
         description: 'Kernel-branch'
-        default: 'main-ksu'
+        default: 'main'
         required: true
         type: string
       kernel-config:
@@ -40,7 +40,7 @@ on:
         type: string
       kernelsu:
         description: 'KernelSU | false for disable'
-        default: 'rksu'
+        default: 'false'
         required: true
         type: string
       disable-lto:
