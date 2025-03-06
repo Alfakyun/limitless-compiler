@@ -10,7 +10,7 @@ on:
         type: string
       name:
         description: 'Name'
-        default: '4.4.302-Atarayo-KSU-SuSFS'
+        default: '4.4.302-Atarayo-EAS'
         required: true
         type: string
       compiler:
@@ -25,7 +25,7 @@ on:
         type: string
       kernel-url:
         description: 'Kernel-url'
-        default: 'https://github.com/Alfakyun/Lonelinext.git'
+        default: 'https://github.com/Alfakyun/Eas.git'
         required: true
         type: string
       kernel-branch:
@@ -40,7 +40,7 @@ on:
         type: string
       kernelsu:
         description: 'KernelSU | false for disable'
-        default: 'nextfs'
+        default: 'false'
         required: true
         type: string
       disable-lto:
