@@ -25,12 +25,12 @@ on:
         type: string
       kernel-url:
         description: 'Kernel-url'
-        default: 'https://github.com/Alfakyun/Lonelinext.git'
+        default: 'https://github.com/Alfakyun/kernel_inline.git'
         required: true
         type: string
       kernel-branch:
         description: 'Kernel-branch'
-        default: 'Atarayo'
+        default: 'morph-ksu-new'
         required: true
         type: string
       kernel-config:
@@ -40,7 +40,7 @@ on:
         type: string
       kernelsu:
         description: 'KernelSU | false for disable'
-        default: 'nextfs'
+        default: 'next'
         required: true
         type: string
       disable-lto:
@@ -124,7 +124,7 @@ jobs:
             elif [ ${{ inputs.aosp-clang }} == "20" ]; then
                 aria2c -o aosp-clang.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r547379.tar.gz
             elif [ ${{ inputs.aosp-clang }} == "21" ]; then 
-                aria2c -o aosp-clang.tar.gz https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250305-release/Clang-21.0.0git-20250305.tar.gz
+                aria2c -o aosp-clang.tar.gz https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250319-release/Clang-21.0.0git-20250319.tar.gz
             elif [ ${{ inputs.aosp-clang }} != false ]; then
                 aria2c -o aosp-clang.tar.gz ${{ inputs.aosp-clang }}
             fi
