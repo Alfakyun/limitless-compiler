@@ -10,7 +10,7 @@ on:
         type: string
       name:
         description: 'Name'
-        default: '4.4.302-Atarayo-KSU-SuSFS'
+        default: '4.4.292-Morph-ksu'
         required: true
         type: string
       compiler:
