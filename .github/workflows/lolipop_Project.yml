@@ -10,7 +10,7 @@ on:
         type: string
       name:
         description: 'Name'
-        default: '4.4.302-Loneliness[nxt-susfs4ksu]'
+        default: '4.4.302-platinum'
         required: true
         type: string
       compiler:
@@ -20,17 +20,17 @@ on:
         type: string
       aosp-clang:
         description: 'Clang | false for disable'
-        default: '21'
+        default: '22'
         required: true
         type: string
       kernel-url:
         description: 'Kernel-url'
-        default: 'https://github.com/FirmanBell/Loneliness_susfs4ksu.git'
+        default: 'https://github.com/hanifardhani/platinum_kernel_xiaomi_platina.git'
         required: true
         type: string
       kernel-branch:
         description: 'Kernel-branch'
-        default: 'new'
+        default: 'eas-bpf-new'
         required: true
         type: string
       kernel-config:
@@ -41,7 +41,7 @@ on:
       kernelsu:
         description: 'KernelSU | false for disable'
         default: '3'
-        required: true
+        required: false
         type: string
       disable-lto:
         description: 'Disable LTO'
@@ -50,7 +50,7 @@ on:
         type: string
       AK3:
         description: 'AnyKernel3'
-        default: 'https://github.com/FirmanBell/AnyKernel3.git'
+        default: 'https://github.com/Alfakyun/AnyKernel3.git'
         required: true
         type: string
 jobs:
@@ -131,7 +131,9 @@ jobs:
             elif [ ${{ inputs.aosp-clang }} == "20" ]; then
                 aria2c -o aosp-clang.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r547379.tar.gz          
             elif [ ${{ inputs.aosp-clang }} == "21" ]; then
-                aria2c -o aosp-clang.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/0998f421320ae02fddabec8a78b91bf7620159f6/clang-r563880.tar.gz         
+                aria2c -o aosp-clang.tar.gz https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/0998f421320ae02fddabec8a78b91bf7620159f6/clang-r563880.tar.gz
+            elif [ ${{ inputs.aosp-clang }} == "22" ]; then
+                aria2c -o aosp-clang.tar.gz https://github.com/ZyCromerZ/Clang/releases/download/22.0.0git-20250922-release/Clang-22.0.0git-20250922.tar.gz
             elif [ ${{ inputs.aosp-clang }} != false ]; then
                 aria2c -o aosp-clang.tar.gz ${{ inputs.aosp-clang }}
             fi
