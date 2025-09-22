@@ -10,7 +10,7 @@ on:
         type: string
       name:
         description: 'Name'
-        default: '4.4.302-platinum'
+        default: '4.4.302-pixelexperience'
         required: true
         type: string
       compiler:
@@ -25,12 +25,12 @@ on:
         type: string
       kernel-url:
         description: 'Kernel-url'
-        default: 'https://github.com/hanifardhani/platinum_kernel_xiaomi_platina.git'
+        default: 'https://github.com/PixelExperience-Devices/kernel_xiaomi_platina.git'
         required: true
         type: string
       kernel-branch:
         description: 'Kernel-branch'
-        default: 'eas-bpf-new'
+        default: 'twelve'
         required: true
         type: string
       kernel-config:
