@@ -20,7 +20,7 @@ on:
         type: string
       aosp-clang:
         description: 'Clang | false for disable'
-        default: '21'
+        default: '22'
         required: true
         type: string
       kernel-url:
@@ -40,8 +40,8 @@ on:
         type: string
       kernelsu:
         description: 'KernelSU | false for disable'
-        default: '3'
-        required: false
+        default: 'flase'
+        required: true
         type: string
       disable-lto:
         description: 'Disable LTO'
